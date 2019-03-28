@@ -1,0 +1,26 @@
+server:
+  port: 9999
+  context-path: /
+  session:
+    cookie:
+      name: UISESSION
+
+
+security:
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      clientId: a1d5fb3fa0c879b93528
+      clientSecret: 9020171b55abb5caed14615789ff8415c955e1b2
+      accessTokenUri: https://github.com/login/oauth/access_token
+      userAuthorizationUri: https://github.com/login/oauth/authorize
+      clientAuthenticationScheme: form
+    resource:
+      userInfoUri: https://api.github.com/user
+      preferTokenInfo: false
+---
+
+spring:
+  thymeleaf:
+    cache: false
